@@ -80,7 +80,7 @@ export default function ProductCard({ product }: { product: Product }) {
       if (navigator.clipboard) {
         navigator.clipboard.writeText(fullUrl).catch(() => {});
       }
-      setWishlistToast("تم نسخ رابط المنتج بنجاح!");
+      setWishlistToast("Product link copied successfully!");
       setTimeout(() => {
         setIsCopying(false);
         setWishlistToast(null);
@@ -184,7 +184,7 @@ Exit            </button>
           type="button"
           onClick={handleShareProduct}
           aria-label="Share product link"
-          title="نسخ رابط المنتج"
+          title="Copy product link"
           className="w-8 h-8 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-600 hover:text-[#16a34a] hover:border-emerald-200 hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
         >
           <RefreshCw
