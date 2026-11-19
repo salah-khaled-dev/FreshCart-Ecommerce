@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -389,11 +390,13 @@ export default function CartPage() {
                     <div className="flex items-center gap-4 w-full sm:w-auto flex-1 min-w-0">
                       <Link
                         href={`/productdetails/${productId}`}
-                        className="w-24 h-24 rounded-xl bg-gray-50 border border-gray-100 p-2 flex items-center justify-center shrink-0 overflow-hidden"
+                        className="w-24 h-24 rounded-xl bg-gray-50 border border-gray-100 p-2 flex items-center justify-center shrink-0 overflow-hidden relative"
                       >
-                        <img
-                          src={prod?.imageCover}
-                          alt={prod?.title}
+                        <Image
+                          src={prod?.imageCover || ""}
+                          alt={prod?.title || "Product"}
+                          width={80}
+                          height={80}
                           className="max-h-full max-w-full object-contain hover:scale-105 transition-transform"
                         />
                       </Link>

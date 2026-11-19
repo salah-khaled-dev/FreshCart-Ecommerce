@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Home,
   ChevronRight,
@@ -149,11 +150,12 @@ export default function BrandsPage() {
                 href={`/brands/${brand._id}`}
                 className="group bg-white rounded-2xl border border-gray-100 p-5 flex flex-col items-center justify-between text-center shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-[0_14px_28px_rgba(10,173,10,0.12)] hover:border-[#16a34a] hover:-translate-y-1.5 transition-all duration-300"
               >
-                <div className="w-full h-28 flex items-center justify-center p-2 mb-3 overflow-hidden">
-                  <img
+                <div className="w-full h-28 flex items-center justify-center p-2 mb-3 overflow-hidden relative">
+                  <Image
                     src={brand.image}
                     alt={brand.name}
-                    loading="lazy"
+                    width={160}
+                    height={100}
                     className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300 ease-out"
                   />
                 </div>

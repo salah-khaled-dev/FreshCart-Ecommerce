@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getAllCategories } from "@/api/services/routemisr.service";
 import { Category } from "@/api/types";
@@ -104,10 +105,11 @@ export default async function ShopByCategory() {
           >
             {/* Circular Image Container */}
             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gray-50 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300 ease-out">
-              <img
+              <Image
                 src={cat.image}
                 alt={cat.name}
-                loading="lazy"
+                width={96}
+                height={96}
                 className="w-full h-full object-cover"
               />
             </div>

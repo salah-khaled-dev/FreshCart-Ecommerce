@@ -385,9 +385,11 @@ export default function ProductDetailsView({
                           : "border border-gray-200 hover:border-gray-400 opacity-80 hover:opacity-100"
                       }`}
                     >
-                      <img
+                      <Image
                         src={img}
                         alt={`${product.title} thumb ${idx + 1}`}
+                        width={80}
+                        height={80}
                         className="max-h-full max-w-full object-contain"
                       />
                     </button>

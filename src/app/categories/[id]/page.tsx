@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Home, ChevronRight, ArrowLeft, Layers, ShoppingBag } from "lucide-react";
 import {
   getSingleCategory,
@@ -84,11 +85,13 @@ export default async function CategoryDetailsPage(props: {
           <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
             <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
               {category?.image && (
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-gray-50 border-2 border-[#e8fadf] shadow-sm shrink-0">
-                  <img
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-gray-50 border-2 border-[#e8fadf] shadow-sm shrink-0 relative">
+                  <Image
                     src={category.image}
                     alt={category.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 96px, 112px"
                   />
                 </div>
               )}

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Package,
   Home,
@@ -324,11 +325,12 @@ export default function AllOrdersPage() {
                           href={`/productdetails/${prodId}`}
                           className="flex items-center gap-3.5 p-3 rounded-2xl border border-gray-100 hover:border-[#16a34a]/40 hover:bg-gray-50/50 transition-all"
                         >
-                          <div className="w-16 h-16 rounded-xl bg-gray-50 border border-gray-100 p-1.5 flex items-center justify-center shrink-0 overflow-hidden">
-                            <img
-                              src={prod?.imageCover}
+                          <div className="w-16 h-16 rounded-xl bg-gray-50 border border-gray-100 p-1.5 flex items-center justify-center shrink-0 overflow-hidden relative">
+                            <Image
+                              src={prod?.imageCover || ""}
                               alt={prod?.title || "Product"}
-                              loading="lazy"
+                              width={60}
+                              height={60}
                               className="max-h-full max-w-full object-contain"
                             />
                           </div>

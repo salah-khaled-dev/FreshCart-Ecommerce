@@ -119,10 +119,10 @@ export default function RegisterPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f9fbfa] py-10 sm:py-14 px-4">
+    <main className="min-h-screen bg-[#f9fbfa] py-6 sm:py-14 px-3 sm:px-4">
       <div className="max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        {/* ── Left Column: Welcome & Value Props ── */}
-        <div className="lg:col-span-6 lg:pr-4 pt-2">
+        {/* ── Left Column: Welcome & Value Props (Desktop Only) ── */}
+        <div className="hidden lg:block lg:col-span-6 lg:pr-4 pt-2">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1c2c34] tracking-tight mb-3">
             Welcome to <span className="text-[#16a34a]">FreshCart</span>
           </h1>

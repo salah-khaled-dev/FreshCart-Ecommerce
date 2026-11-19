@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, RefreshCw, Eye, Star, Plus, Loader2, ShieldAlert } from "lucide-react";
 import { Product } from "@/api/types";
 import {
@@ -210,11 +211,13 @@ export default function ProductCard({ product }: { product: Product }) {
         href={`/productdetails/${productId}`}
         className="w-full h-48 sm:h-52 flex items-center justify-center mb-4 pt-2 overflow-hidden"
       >
-        <img
+        <Image
           src={product.imageCover}
           alt={product.title}
-          loading="lazy"
+          width={300}
+          height={300}
           className="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-300 ease-out"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
       </Link>
 

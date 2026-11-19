@@ -221,10 +221,10 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f9fbfa] py-10 sm:py-16 px-4 flex items-center">
+    <main className="min-h-screen bg-[#f9fbfa] py-6 sm:py-16 px-3 sm:px-4 flex items-center">
       <div className="max-w-[1140px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-        {/* ── Left Column: Illustration & Highlights ── */}
-        <div className="lg:col-span-6 flex flex-col items-center text-center">
+        {/* ── Left Column: Illustration & Highlights (Desktop Only) ── */}
+        <div className="hidden lg:flex lg:col-span-6 flex-col items-center text-center">
           {/* Shopping Cart with Fresh Produce Illustration Card */}
           <div className="w-full max-w-[440px] rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] p-6 sm:p-8 mb-7 flex items-center justify-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-28 h-28 bg-[#dcfce7]/50 rounded-bl-full pointer-events-none" />

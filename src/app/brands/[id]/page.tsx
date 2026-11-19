@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Home,
   ChevronRight,
@@ -68,10 +69,12 @@ export default async function BrandDetailsPage(props: {
           <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
               {brand?.image && (
-                <div className="w-28 h-28 rounded-2xl overflow-hidden bg-white border-2 border-[#e8fadf] p-3 flex items-center justify-center shadow-2xs shrink-0">
-                  <img
+                <div className="w-28 h-28 rounded-2xl overflow-hidden bg-white border-2 border-[#e8fadf] p-3 flex items-center justify-center shadow-2xs shrink-0 relative">
+                  <Image
                     src={brand.image}
                     alt={brand.name}
+                    width={100}
+                    height={100}
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Home, ChevronRight } from "lucide-react";
 import { getAllCategories } from "@/api/services/routemisr.service";
 import { Category } from "@/api/types";
@@ -48,11 +49,12 @@ export default async function CategoriesPage() {
               className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_14px_30px_rgba(10,173,10,0.12)] hover:border-[#16a34a] hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
             >
               <div className="w-full h-56 overflow-hidden bg-gray-50 relative">
-                <img
+                <Image
                   src={cat.image}
                   alt={cat.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-300 ease-out"
+                  fill
+                  className="object-cover group-hover:scale-108 transition-transform duration-300 ease-out"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
 

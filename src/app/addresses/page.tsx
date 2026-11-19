@@ -176,7 +176,7 @@ export default function AddressesPage() {
               href="/"
               className="flex-1 h-11 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl text-sm flex items-center justify-center transition-all cursor-pointer"
             >
-              الرئيسية
+           Home   
             </Link>
           </div>
         </div>

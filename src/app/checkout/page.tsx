@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -657,10 +658,12 @@ Please Login First          </h1>
                           className="bg-gray-50/80 rounded-xl p-2.5 flex items-center justify-between gap-3 border border-gray-100"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
-                            <div className="w-11 h-11 rounded-lg bg-white border border-gray-100 p-1 flex items-center justify-center shrink-0 overflow-hidden">
-                              <img
-                                src={prod?.imageCover}
-                                alt={prod?.title}
+                            <div className="w-11 h-11 rounded-lg bg-white border border-gray-100 p-1 flex items-center justify-center shrink-0 overflow-hidden relative">
+                              <Image
+                                src={prod?.imageCover || ""}
+                                alt={prod?.title || "Product"}
+                                width={40}
+                                height={40}
                                 className="max-h-full max-w-full object-contain"
                               />
                             </div>

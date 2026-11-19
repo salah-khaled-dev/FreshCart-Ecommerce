@@ -9,14 +9,14 @@ function ShopByCategorySkeleton() {
   return (
     <section className="max-w-[1320px] mx-auto px-4 py-8">
       <div className="h-7 w-48 rounded-md skeleton-shimmer mb-6" />
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl border border-gray-100 p-4 flex flex-col items-center"
+            className="bg-white rounded-2xl border border-gray-100 p-5 flex flex-col items-center justify-center text-center shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
           >
-            <div className="w-20 h-20 rounded-full skeleton-shimmer mb-3" />
-            <div className="h-3 w-16 rounded-md skeleton-shimmer" />
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full skeleton-shimmer mb-3" />
+            <div className="h-3.5 w-20 rounded-md skeleton-shimmer" />
           </div>
         ))}
       </div>
