@@ -129,25 +129,22 @@ export default function ProductCard({ product }: { product: Product }) {
             <ShieldAlert className="w-6 h-6" />
           </div>
           <p className="text-sm font-bold text-[#1c2c34] mb-1">
-            يجب تسجيل الدخول أولاً
-          </p>
+            Please Login First          </p>
           <p className="text-[11px] text-[#64748b] leading-relaxed mb-3.5">
-            يرجى تسجيل الدخول لتتمكن من إضافة المنتجات إلى السلة أو المفضلة.
+            Please login to add products to the cart or favorites.
           </p>
           <div className="flex items-center gap-2 w-full justify-center">
             <Link
               href="/login"
               className="px-3 py-1.5 bg-[#16a34a] hover:bg-[#15803d] text-white text-xs font-semibold rounded-lg shadow-sm transition-all"
             >
-              تسجيل الدخول
-            </Link>
+Login            </Link>
             <button
               type="button"
               onClick={() => setShowAuthPrompt(false)}
               className="px-2.5 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors cursor-pointer"
             >
-              إلغاء
-            </button>
+Exit            </button>
           </div>
         </div>
       )}
